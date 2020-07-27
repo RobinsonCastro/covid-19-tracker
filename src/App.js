@@ -70,11 +70,13 @@ function App() {
 				setCountryInfo(data);
 
 				const latitude = (data?.countryInfo?.lat) ? data.countryInfo.lat : 34.80746;
-				const longitude = (data?.countryInfo?.long)  ? data.countryInfo.long : -40.4796;
+				const longitude = (data?.countryInfo?.long) ? data.countryInfo.long : -40.4796;
+				console.log(latitude);
+				console.log(longitude);
 				setMapCenter([latitude, longitude]);
 				
 				const zoom = (data?.countryInfo?.lat) ? 3 : 2;
-				setMapZoom(zoom);
+				// setMapZoom(zoom);
 			});
 
 		console.log(countryInfo);
